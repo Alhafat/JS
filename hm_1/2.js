@@ -7,4 +7,6 @@
 Вывести значение переменной admin в консоль.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+let userName = "Vladimir";
+let admin = userName;
+console.log(`admin: ${admin}`);
