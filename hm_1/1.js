@@ -13,6 +13,10 @@
 Уточнение: пользователь всегда вводит корректное число.
 */
 
-let temperatureC = prompt("Введите температуру в градусах Цельсия: ");
-let temperatureF = (9 / 5) * temperatureC + 32;
-alert(`Температура: "Цельсий: ${temperatureC}, Фаренгейт: ${temperatureF}"`);
+let temperatureC = +prompt("Введите температуру в градусах Цельсия: ");
+let temperatureF = ((9 / 5) * temperatureC + 32).toFixed(0);
+alert(
+  `Температура: "Цельсий: ${Math.round(
+    temperatureC
+  )}, Фаренгейт: ${temperatureF}"`
+);

@@ -31,7 +31,7 @@ if (number % 1 != 0 || number < 0) {
   while (len_number_arr.length < 3) {
     len_number_arr.unshift("0");
   }
-  console.log(
+  alert(
     `В числе ${number} количество сотен: ${len_number_arr.at(
       -3
     )}, десятков: ${len_number_arr.at(-2)}, единиц:  ${len_number_arr.at(-1)}`

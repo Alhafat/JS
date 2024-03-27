@@ -14,7 +14,7 @@
 число 32.
 */
 
-let dayNumber = Number(prompt("введите целое число в интервале от 1 до 32: "));
+let dayNumber = +prompt("введите целое число в интервале от 1 до 32: ");
 
 if (dayNumber < 1 || dayNumber > 31 || dayNumber % 1 != 0) {
   alert("Введено неверное значение");
