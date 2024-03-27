@@ -19,7 +19,7 @@ console.log(round5(-2)); // 0
 console.log(round5(-3)); // -5
 ```*/
 
-function my_func(number) {
+function round5(number) {
   //   if (number % 5 == 0) {
   //     return number;
   //   }
@@ -43,12 +43,12 @@ function my_func(number) {
 }
 
 alert(`
-${my_func(0)}
-${my_func(2)}
-${my_func(3)}
-${my_func(11)}
-${my_func(14)}
-${my_func(50)}
-${my_func(-2)}
-${my_func(-3)}
+${round5(0)}
+${round5(2)}
+${round5(3)}
+${round5(11)}
+${round5(14)}
+${round5(50)}
+${round5(-2)}
+${round5(-3)}
 `);
