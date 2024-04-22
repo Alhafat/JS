@@ -31,11 +31,11 @@ const products_task = [
   },
 ];
 
-for (const elem of products_task) {
-  if (elem.photos && elem.photos.length) {
-    console.log("Продукт с фотографиями:", elem);
-  }
-}
+// for (const elem of products_task) {
+//   if (elem.photos && elem.photos.length) {
+//     console.log("Продукт с фотографиями:", elem);
+//   }
+// }
 
 // Задача 1: Вывести в консоль массив продуктов, в котором есть хотя бы одна фотография
 const productsWithPhotos = products_task.filter(
