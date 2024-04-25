@@ -95,3 +95,4 @@ console.log(`8. Удалите тег h6 на странице.`);
 const h6Elem = document.querySelector("h6");
 console.log(h6Elem);
 h6Elem && h6Elem.remove();
+console.log(`Элемент адален: ${document.querySelector("h6")}`);
