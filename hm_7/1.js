@@ -23,11 +23,12 @@ const btnClass = document.querySelectorAll(".btn");
 console.log(btnClass);
 const btnSecondaryClass = "btn-secondary";
 btnClass.forEach((element) => {
-  if (element.classList.contains(btnSecondaryClass)) {
-    element.classList.remove(btnSecondaryClass);
-  } else {
-    element.classList.add(btnSecondaryClass);
-  }
+  //   if (element.classList.contains(btnSecondaryClass)) {
+  //     element.classList.remove(btnSecondaryClass);
+  //   } else {
+  //     element.classList.add(btnSecondaryClass);
+  //   }
+  element.classList.toggle(btnSecondaryClass);
 });
 console.log(btnClass);
 
@@ -41,7 +42,10 @@ console.log(
 
 const menuClass = document.querySelector(".menu");
 console.log(menuClass);
-menuClass.classList.remove("dropdown-menu");
+// menuClass.classList.remove("dropdown-menu");
+if (menuClass.classList.contains("menu")) {
+  menuClass.classList.remove("dropdown-menu");
+}
 console.log(document.querySelector(".menu"));
 
 /*
@@ -63,7 +67,7 @@ dropdownClass.insertAdjacentHTML("afterend", link);
 console.log(
   `5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".`
 );
-let dropdownMenuButtonID = document.getElementById("dropdownMenuButton");
+const dropdownMenuButtonID = document.getElementById("dropdownMenuButton");
 dropdownMenuButtonID.id = "superDropdown";
 console.log(`id dropdownMenuButton = ${dropdownMenuButtonID.id}`);
 
@@ -73,9 +77,22 @@ console.log(`id dropdownMenuButton = ${dropdownMenuButtonID.id}`);
 console.log(
   `6. Добавьте атрибут data-dd со значением 3 элементу у которого существует атрибут "aria-labelledby" равный "dropdownMenuButton" используя dataset.`
 );
+
+const elementsWithAriaLabelledById = document.querySelectorAll(
+  '[aria-labelledby="dropdownMenuButton"]'
+);
+elementsWithAriaLabelledById.forEach((element) => {
+  //   element.dataset.dd = "3";
+  if (element.dataset.dd === undefined) {
+    element.dataset.dd = "3";
+  }
+  console.log(element);
+});
+
 /*
 7. Удалите атрибут type у элемента с классом "dropdown-toggle".
 */
 console.log(`7. Удалите атрибут type у элемента с классом "dropdown-toggle".`);
+
 const dropdownToggle = document.querySelector(".dropdown-toggle");
 dropdownToggle.removeAttribute("type");
